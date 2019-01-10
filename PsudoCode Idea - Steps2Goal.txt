@@ -1,0 +1,50 @@
+Using Fitbit API 
+
+Pull from JSON 
+
+https://dev.fitbit.com/build/reference/web-api/activity/
+
+activities.step - log to var (this is total steps for the day)
+
+Goal.steps - log to Var (this is the Goal Steps of the user)
+
+goal.steps - activity.steps  = Steps needed to Take (log to a Var)
+
+
+Using 
+
+JSON from "User"
+
+Pull
+
+user."strideLengthWalking" - log to Var
+
+take user.strideLengthWalking x activity.steps = Distance Needed to Travel
+
+
+
+Pull Location from
+
+Mozilla Location API
+
+https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
+
+Log into Var
+
+
+==================================
+
+Push all to Firebase
+
+
+=====================================
+
+
+
+Pull from Firebase  OR connect Firebase to GoogleMap API directly
+
+
+Use data pulled to give possible locations that would "fill your steps"
+
+
+
