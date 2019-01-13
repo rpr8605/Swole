@@ -1,0 +1,21 @@
+# User Story
+
+As a fitness enthusiast I want to be able to get all my steps in each day in my busy life so that I can meet my fitness goals.
+
+
+# Identify Target Audience
+
+Anyone that is looking to keep track of fitness goals
+
+
+# Identify Problems That Product Will Address
+
+Give a additional set of motivation to reaching your daily Step goals
+
+# Primary Goal of Product
+
+Help people to achieve fitness goals.
+
+# Identify and Prioritize Essential User Stories
+
+
