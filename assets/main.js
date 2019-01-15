@@ -1,3 +1,7 @@
+$(document).ready(function () {
+
+
+
 // Google Maps API (key)
 var googleAPIKey = "AIzaSyCyP0zeiIILBW9EPXfiYD2VU3E6gm5hPnk";
 
@@ -5,8 +9,8 @@ var googleAPIKey = "AIzaSyCyP0zeiIILBW9EPXfiYD2VU3E6gm5hPnk";
 var googleGeolocationURL = "https://www.googleapis.com/geolocation/v1/geolocate?key=" + googleAPIKey +
 "&macAddress";
 
-// Google Maps API (Directions)
-var destination = "Starbucks";
+// // Google Maps API (Directions)
+// var destination = "Starbucks";
 
 var googleDirectionsURL = "https://maps.googleapis.com/maps/api/directions/json?" +
 "origin=Blue Springs, MO" + 
@@ -21,19 +25,13 @@ var googleDirectionsURL = "https://maps.googleapis.com/maps/api/directions/json?
 //     method: "GET"
 // }).then(function(response) {
 //     console.log(response);
-// });
+// // });
 
-// JSON call Directions
+// // JSON call Directions
 $.ajax({
     url: googleDirectionsURL,
     method: "GET",
-    headers: {
-        'Accept': "*/*",
-        'Access-Control-Allow-Origin': "*",
-        'Access-Control-Allow-Methods': "GET",
-        'Access-Control-Allow-Credentials': true,
-        'Access-Control-Allow-Headers': "authorization"
-    },
+    dataType: 'jsonp'
 }).then(function(response) {
     console.log(response);
     var distance = response.routes[0].legs[0].distance.text;
@@ -41,26 +39,23 @@ $.ajax({
     console.log("Distance: " + distance);
     console.log("Duration: " + duration);
 
-}, function(errorObject) {
-    console.log("Error handling: " + errorObject.code);
+}).catch(function(error) {
+    error.then(console.log);
 });
 
-
-// get the url
 var url = window.location.href;
-
 //getting the access token from url
-var access_token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMkQ5RFMiLCJzdWIiOiI3OEo0QloiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyc29jIHJhY3QgcnNldCBybG9jIHJ3ZWkgcmhyIHJwcm8gcm51dCByc2xlIiwiZXhwIjoxNTQ4MTE5NTE3LCJpYXQiOjE1NDc1MTQ3MTd9._BdFGIQgIHqbd0YtlpNAZL40_fTfLLPrTEVTnE4oMAg";
+var access_token = url.split("#")[1].split("=")[1].split("&")[0];
 
 // get the userid
-var userId = "78J4BZ";
+var userId = url.split("#")[1].split("=")[2].split("&")[0];
 
 console.log(access_token);
 console.log(userId);
 
 
 $.ajax({
-    url: 'httpss://api.fitbit.com/1/user/'+ userId +'/activities/heart/date/today/1w.json',
+    url: 'https://api.fitbit.com/1/user/'+ userId +'/activities/steps/date/today/1d.json',
     method: "GET",
     headers: {
         "Authorization": "Bearer " + access_token
@@ -72,13 +67,4 @@ $.ajax({
     console.log("Error handling: " + objectError.code);
 });
 
-// var xhr = new XMLHttpRequest();
-// xhr.open('GET', 'httpss://api.fitbit.com/1/user/'+ userId +'/activities/heart/date/today/1w.json');
-// xhr.setRequestHeader("Authorization", 'Bearer ' + access_token);
-// xhr.onload = function() {
-//    if (xhr.status === 200) {
-//       console.log(xhr.responseText);
-//       document.write(xhr.responseText);
-//    }
-// };
-// xhr.send();
+});
