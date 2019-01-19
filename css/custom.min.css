@@ -1,0 +1,39 @@
+img #headLogo .responsive-img{
+
+    Height: 10%;
+    position: fixed;
+    margin: unset !important;
+    top: 10px;
+    left: 10px;
+
+}
+
+#login-page{
+    display: table;
+    margin: auto;
+    Height: 95%;
+}
+
+.tableContainer{
+    display: table;
+    margin: auto;
+    Height: 95%;
+
+}
+
+#howFar{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#PlaceTitle{
+
+    text-align: center;
+    alignment: block;
+    margin: auto;
+    background-color: white;
+    color: navy;
+
+}
