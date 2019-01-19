@@ -7,9 +7,10 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="style.css">
   </head>
+
   <body>
     
     <div class="jumbotron">
@@ -18,34 +19,42 @@
         <hr class="my-4">
         <p>Step2Goal an addon for your favorite fitness tracker.</p>
         
-      </div>
-
-
+    </div>
 
 <br>
 
 <br>
-
-
 
 <form method="post" action="index.html">
-<div class="box">
-<h1>Login to Generate Results</h1>
+    <div class="box">
+    <h1>Login to Generate Results</h1>
 
-<input type="email" name="email" value="email" class="email" />
-  
-<input type="password" name="email" value="email"  class="email" />
-  
-<a href="#"><div class="btn">Sign In</div></a> <!-- End Btn -->
+    <input type="email" name="email" value="email" class="email" />
+    
+    <input type="password" name="email" value="email"  class="email" />
+    
+    <a href="#"><div class="btn">Sign In</div></a> <!-- End Btn -->
 
-<a href="#"><div id="btn2">Sign Up</div></a> <!-- End Btn2 -->
-  
-</div> <!-- End Box -->
-  
+    <a href="#"><div id="btn2">Sign Up</div></a> <!-- End Btn2 -->
+    
+    </div> <!-- End Box -->
 </form>
 
+<a href="https://www.fitbit.com/oauth2/authorize?response_type=token&client_id=22D9DS&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fresults.html&scope=activity%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight&expires_in=604800"><button>FitBit</button></a>
+    
+
+<!-- jQuery CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Bootstrap CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<!-- Firebase API Script -->
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+
+<!-- Local JS -->
+<script src="./assets/mockFitbitResponse.js"></script>
+<script src="./assets/main.js"></script>
 
 </body>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
 </html>

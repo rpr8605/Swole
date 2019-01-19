@@ -1,0 +1,22 @@
+{
+  "name": "steps2goal",
+  "version": "1.0.0",
+  "description": "First Project for KU-FullStack Bootcamp - The best group.",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rpr8605/steps2goal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rpr8605/steps2goal/issues"
+  },
+  "homepage": "https://github.com/rpr8605/steps2goal#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
