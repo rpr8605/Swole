@@ -1,60 +1,170 @@
-
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <title>Step2Goal</title>
-    <meta name="description" content="Roughly 155 characters">
+
+    <!-- Favicons-->
+    <link rel="icon" href="fav/favicon-32x32.png" sizes="32x32" />
+    <!-- Favicons-->
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="fav/apple-touch-icon-152x152.png"
+    />
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#FB4F14" />
+    <meta
+      name="msapplication-TileImage"
+      content="fav/apple-touch-icon-114x114.png"
+    />
+
+    <!-- CSS-->
+
+    <link
+      href="css/materialize.min.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="css/style.min.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+
+    <!-- JS CSS PLUGINS  -->
+    <link
+      href="js/plugins/prism/prism.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="js/plugins/perfect-scrollbar/perfect-scrollbar.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+
+    <!-- Custom CSS-->
+
+    <link
+      href="css/custom.min.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <!-- <link
+      href="css/page-center.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection" -->
     
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="style.css">
   </head>
 
-  <body>
-    
-    <div class="jumbotron">
-        <h1 class="display-4">Steps2Goal</h1>
-        <p class="lead">Helping people complete Step goals.</p>
-        <hr class="my-4">
-        <p>Step2Goal an addon for your favorite fitness tracker.</p>
-        
+  <div>
+    <img
+      id="headLogo"
+      class="responsive-img"
+      src="S2GLOGO2.JPG"
+      style="width:195px;height:87px; Margin:Unset;"
+    >
+</div>
+
+  <body class="Orange">
+    <!-- Start Page Loading -->
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+    <!-- End Page Loading -->
+
+    <div id="login-page" class="row">
+      <div class="col s12 z-depth-4 card-panel">
+        <form class="login-form">
+          <div class="row">
+            <div class="input-field col s12 center">
+              <img
+                src="LOGO.jpg" style="width:100px;Height:90px;"
+                alt=""
+                class="circle responsive-img valign profile-image-login"
+               >
+              <p class="center login-form-text">Login to Step2Goal</p>
+            </div>
+          </div>
+          <div class="row margin">
+            <div class="input-field col s12">
+              <input id="username" type="text" />
+              <label for="username" class="center-align">FitBit Username</label>
+            </div>
+          </div>
+          <div class="row margin">
+            <div class="input-field col s12">
+              <input id="password" type="password" />
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <a href="results.html" href="https://www.fitbit.com/oauth2/authorize?response_type=token&client_id=22D9DS&redirect_uri=https%3A%2F%2Frpr8605.github.io%2Fsteps2goal%2Fresults.html&scope=activity%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight&expires_in=604800
+              "class="btn waves-effect waves-light col s12" id="submit"
+                >Login</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6 m6 l6">
+              <p class="margin medium-small">
+                <a href="https://www.fitbit.com/signup">Sign Up!</a>
+              </p>
+            </div>
+            <div class="input-field col s6 m6 l6">
+              <p class="margin right-align medium-small">
+                <a href="https://www.fitbit.com/login/forgotPassword">Forgot password ?</a>
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
 
-<br>
+    <!-- ================================================
+    Scripts
+    ================================================ -->
 
-<br>
+    <script>
+      function myFunction() {
+        document.getElementById("Login-Page").style.display = "none";
+        document.getElementById("mainFrameTwo").style.display = "block";
+      }
+    </script>
 
-<form method="post" action="index.html">
-    <div class="box">
-    <h1>Login to Generate Results</h1>
+    <!-- jQuery Library -->
+    <script
+      type="text/javascript"
+      src="js/plugins/jquery-1.11.2.min.js"
 
-    <input type="email" name="email" value="email" class="email" />
-    
-    <input type="password" name="email" value="email"  class="email" />
-    
-    <a href="#"><div class="btn">Sign In</div></a> <!-- End Btn -->
+      
+    ></script>
+    <!--materialize js-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--prism-->
+    <script type="text/javascript" src="js/plugins/prism/prism.js"></script>
+    <!--scrollbar-->
+    <script
+      type="text/javascript"
+      src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"
+    ></script>
 
-    <a href="#"><div id="btn2">Sign Up</div></a> <!-- End Btn2 -->
-    
-    </div> <!-- End Box -->
-</form>
+    <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+    <script type="text/javascript" src="js/plugins.min.js"></script>
 
-<a href="https://www.fitbit.com/oauth2/authorize?response_type=token&client_id=22D9DS&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fresults.html&scope=activity%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight&expires_in=604800"><button>FitBit</button></a>
-    
-
-<!-- jQuery CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Bootstrap CDN -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
-<!-- Firebase API Script -->
-<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
-
-<!-- Local JS -->
-<script src="./assets/mockFitbitResponse.js"></script>
-<script src="./assets/main.js"></script>
-
-</body>
+  </body>
 </html>
