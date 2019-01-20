@@ -136,8 +136,8 @@ function fourSquareCallFunction (x, y) {
             // This sets venue name on the page and a hyperlink to google maps
             venueName.append('<a class="location-tag" href="https://www.google.com/maps/preview?saddr=' + x + ', ' + y +'&daddr=' + name + '&api=AIzaSyCyP0zeiIILBW9EPXfiYD2VU3E6gm5hPnk&dirflg=w" target="_blank">' + name + "</a>");
         }
-    }).catch(function (objectError){
-        console.log("Error handling" + objectError.code);
+    // }).catch(function (objectError){
+    //     console.log("Error handling" + objectError.code);
     });
 }
 
