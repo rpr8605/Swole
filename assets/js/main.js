@@ -22,6 +22,7 @@ function getLocation() {
                     $("#current-location").text(currentLocation);
 
                     $("iframe").attr("src", "https://maps.google.com/maps?q=" + currentLocation + "&t=&z=13&ie=UTF8&iwloc=&output=embed");
+
                 }
             });
 
@@ -74,6 +75,18 @@ var userId = url.split("#")[1].split("=")[2].split("&")[0];
     });
 
 
+//For Mobile Devices
+
+function myNavFunc(a, b, location){
+    // If it's an iPhone..
+    if( (navigator.platform.indexOf("iPhone") != -1) 
+        || (navigator.platform.indexOf("Android") != -1)
+        || (navigator.platform.indexOf("iPad") != -1)) {
+            window.open("maps://maps.google.com/maps?daddr=" + a + ", " + b + "dirflg=w&&api=AIzaSyCyP0zeiIILBW9EPXfiYD2VU3E6gm5hPnk");
+        }
+}
+
+
 // Foursquare API Call
 function fourSquareCallFunction (x, y) {
     
@@ -122,6 +135,8 @@ function fourSquareCallFunction (x, y) {
         
             // This sets venue name on the page and a hyperlink to google maps
             venueName.append('<a class="location-tag" href="https://www.google.com/maps/preview?saddr=' + x + ', ' + y +'&daddr=' + name + '&api=AIzaSyCyP0zeiIILBW9EPXfiYD2VU3E6gm5hPnk&dirflg=w" target="_blank">' + name + "</a>");
+
+            myNavFunc(x, y, name);
         }
     }, function (objectError){
         console.log("Error handling" + objectError.code);
