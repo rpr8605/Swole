@@ -1,15 +1,15 @@
 
 // Firebase API hookup
-var config = {
-    apiKey: "AIzaSyCWcDhPrqucSxP3nlI4hMCjcYOxQMgSxqk",
-    authDomain: "my-project-1547081516230.firebaseapp.com",
-    databaseURL: "https://my-project-1547081516230.firebaseio.com",
-    projectId: "my-project-1547081516230",
-    storageBucket: "",
-    messagingSenderId: "527893067849"
-};
+// var config = {
+//     apiKey: "AIzaSyCWcDhPrqucSxP3nlI4hMCjcYOxQMgSxqk",
+//     authDomain: "my-project-1547081516230.firebaseapp.com",
+//     databaseURL: "https://my-project-1547081516230.firebaseio.com",
+//     projectId: "my-project-1547081516230",
+//     storageBucket: "",
+//     messagingSenderId: "527893067849"
+// };
 
-firebase.initializeApp(config);
+// firebase.initializeApp(config);
 
 
 // Getting Location of User
