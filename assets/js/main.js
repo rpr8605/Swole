@@ -1,16 +1,4 @@
 
-// Firebase API hookup
-// var config = {
-//     apiKey: "AIzaSyCWcDhPrqucSxP3nlI4hMCjcYOxQMgSxqk",
-//     authDomain: "my-project-1547081516230.firebaseapp.com",
-//     databaseURL: "https://my-project-1547081516230.firebaseio.com",
-//     projectId: "my-project-1547081516230",
-//     storageBucket: "",
-//     messagingSenderId: "527893067849"
-// };
-
-// firebase.initializeApp(config);
-
 
 // Getting Location of User
 function getLocation() {
@@ -26,19 +14,14 @@ function getLocation() {
             
             geocoder.geocode({'latLng': point}, function (locations, status) {
                 if (status == google.maps.GeocoderStatus.OK) {
-                    for (var location of locations) {
-                        console.log(location);
 
-                        if ($.inArray('premise', location.types) != -1) {
-                            console.log('Your location is: ' + location.formatted_address);
-                            var currentLocation = location.formatted_address;
-                            $("#current-location").text(currentLocation);
+                    console.log(locations[0].formatted_address);
 
-                            $("iframe").attr("src", "https://maps.google.com/maps?q=" + currentLocation + "&t=&z=13&ie=UTF8&iwloc=&output=embed");
+                    var currentLocation = locations[0].formatted_address;
+                    console.log(currentLocation);
+                    $("#current-location").text(currentLocation);
 
-                            break;
-                        }
-                    }
+                    $("iframe").attr("src", "https://maps.google.com/maps?q=" + currentLocation + "&t=&z=13&ie=UTF8&iwloc=&output=embed");
                 }
             });
 
@@ -49,7 +32,10 @@ function getLocation() {
         console.log("Geolocation is not supported by this browser.");
     }
 }
+
 getLocation();
+console.log(getLocation());
+
 
 
 // Fitbit API Call
@@ -137,7 +123,7 @@ function fourSquareCallFunction (x, y) {
             // This sets venue name on the page and a hyperlink to google maps
             venueName.append('<a class="location-tag" href="https://www.google.com/maps/preview?saddr=' + x + ', ' + y +'&daddr=' + name + '&api=AIzaSyCyP0zeiIILBW9EPXfiYD2VU3E6gm5hPnk&dirflg=w" target="_blank">' + name + "</a>");
         }
-    }).catch(function (objectError){
+    }, function (objectError){
         console.log("Error handling" + objectError.code);
     });
 }
