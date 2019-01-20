@@ -78,12 +78,9 @@ var userId = url.split("#")[1].split("=")[2].split("&")[0];
 
         var remainingDistance = goalDistance - currentDistance;
 
-        var convertedRemainingDistance = remainingDistance / 2500;
-
-        console.log("Remaining Distance: " + convertedRemainingDistance);
-        convertedRemainingDistance = convertedRemainingDistance.toFixed(2);
+        console.log("Remaining Distance: " + remainingDistance);
         
-        $("#goal").text(convertedRemainingDistance + " mi");
+        $("#goal").text(remainingDistance + " steps");
     
     }, function(objectError){
         console.log("Error handling: " + objectError.code);
@@ -131,7 +128,10 @@ function fourSquareCallFunction (x, y) {
             tableRow.append(venueDistance);
 
             //This displays the data to the page.
-            venueDistance.append(distance + " meters");
+            convertedDistance = distance / 1609.344;
+            convertedDistanceFixed = convertedDistance.toFixed(2);
+
+            venueDistance.append(distance + " mi");
         
             // This sets venue name on the page and a hyperlink to google maps
             venueName.append('<a class="location-tag" href="https://www.google.com/maps/preview?saddr=' + x + ', ' + y +'&daddr=' + name + '&api=AIzaSyCyP0zeiIILBW9EPXfiYD2VU3E6gm5hPnk&dirflg=w" target="_blank">' + name + "</a>");
