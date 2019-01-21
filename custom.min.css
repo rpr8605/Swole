@@ -38,10 +38,24 @@ img #headLogo .responsive-img{
 
 }
 
-#locationsList{
 
+#tableResults{
     background-color: white;
-    Margin-top: 10px;
 
 
 }
+
+#headSpace{
+
+    border-bottom: solid white 2px;
+    margin-bottom: 20px;
+}
+
+#Wycg{
+
+    text-align: Center;
+    Font-size: 3em;
+    margin-bottom: 5px;
+
+}
+
