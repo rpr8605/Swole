@@ -37,3 +37,25 @@ img #headLogo .responsive-img{
     color: navy;
 
 }
+
+
+#tableResults{
+    background-color: white;
+
+
+}
+
+#headSpace{
+
+    border-bottom: solid white 2px;
+    margin-bottom: 20px;
+}
+
+#Wycg{
+
+    text-align: Center;
+    Font-size: 3em;
+    margin-bottom: 5px;
+
+}
+
